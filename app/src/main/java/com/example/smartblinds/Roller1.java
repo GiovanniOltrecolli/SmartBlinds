@@ -2,6 +2,7 @@ package com.example.smartblinds;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
@@ -11,21 +12,25 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class Roller1 extends AppCompatActivity {
+    public static final String MyPREFERENCES = "MyPrefs" ;
+    public static final String NameRoller1 ="NameOfRoller1";
+
+    SharedPreferences sharedpreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_roller1);
 
+        //recupero del titolo dell'activity
 
-        String name = getIntent().getExtras().getString("Titolo");
+        sharedpreferences = getSharedPreferences(MyPREFERENCES, MODE_PRIVATE);
 
-        // prendo l'id della text view di cui voglio cambiare il nome
+        String n= sharedpreferences.getString("NameOfRoller1",NameRoller1);
+
         TextView title_of_activity= findViewById(R.id.tile_roller1);
 
-
-        //applico il metodo .setText per settare il campo di testo della TextView con il nome passato dall'intent
-        title_of_activity.setText(name);
+        title_of_activity.setText(n);
 
     }
 

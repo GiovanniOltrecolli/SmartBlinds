@@ -44,7 +44,7 @@
                     android:id="@+id/b_enter"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="vis"
+                    android:onClick="number_rooms"
                     android:layout_marginRight="120dp"
                     android:text="@string/button_enter"
                     android:backgroundTint="@color/green">

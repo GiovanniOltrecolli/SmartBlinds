@@ -59,7 +59,7 @@
                     android:id="@+id/b_enter_r1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="vis_r1"
+                    android:onClick="number_roller"
                     android:layout_marginRight="120dp"
                     android:text="@string/button_enter"
                     android:backgroundTint="@color/green">

@@ -32,12 +32,14 @@ public class MainActivity extends AppCompatActivity {
 
         sharedpreferences = getSharedPreferences(MyPREFERENCES, MODE_PRIVATE);
 
-
+        // imposto un valore di default al numero di stanze (1)
         String n= sharedpreferences.getString(NRooms,"1");
+
+        // imposto un valore di default al numero di stanze nello spinner
         Spinner spinner_number = findViewById(R.id.planets_spinner);
         spinner_number.setSelection((Integer.parseInt(n)) -1);
 
-
+        // in base al numero di stanze selezionate rendo visibili o no i bottoni per accedere alle stanze
 
             switch (n) {
 
@@ -70,6 +72,8 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
 
+            // imposto un valore di default del nome dei bottoni delle stanze
+
         String nameBotton1 = sharedpreferences.getString(NameR1,"Rooms 1");
             b1.setText(nameBotton1);
 
@@ -83,8 +87,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+   /*al cliccare del bottone "Enter" la funzione "number_rooms" rende visibili un numero di bottoni pari al numero selezionato nello spinner e salva nelle preferenze
+   tale numero
+    */
 
-    public void vis (View view){
+    public void number_rooms (View view){
         Button b1;
         Button b2;
         Button b3;
@@ -102,9 +109,8 @@ public class MainActivity extends AppCompatActivity {
                 b1.setVisibility(View.VISIBLE);
                 b2.setVisibility(View.GONE);
                 b3.setVisibility(View.GONE);
-                String n = String.valueOf(spinner.getSelectedItem());
                 SharedPreferences.Editor editor = sharedpreferences.edit();
-                editor.putString(NRooms,n);
+                editor.putString(NRooms,string);
                 editor.apply();
                 break;
 
@@ -116,9 +122,8 @@ public class MainActivity extends AppCompatActivity {
                 b1.setVisibility(View.VISIBLE);
                 b2.setVisibility(View.VISIBLE);
                 b3.setVisibility(View.GONE);
-                String n = String.valueOf(spinner.getSelectedItem());
                 SharedPreferences.Editor editor = sharedpreferences.edit();
-                editor.putString(NRooms,n);
+                editor.putString(NRooms,string);
                 editor.apply();
                 break;
             }
@@ -129,13 +134,13 @@ public class MainActivity extends AppCompatActivity {
                 b1.setVisibility(View.VISIBLE);
                 b2.setVisibility(View.VISIBLE);
                 b3.setVisibility(View.VISIBLE);
-                String n = String.valueOf(spinner.getSelectedItem());
                 SharedPreferences.Editor editor = sharedpreferences.edit();
-                editor.putString(NRooms,n);
+                editor.putString(NRooms,string);
                 editor.apply();
                 break;
             }
         }
+
 
         EditText editText;
         Button b4;
@@ -152,6 +157,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+    // cambia il nome dei bottoni delle stanze e i titoli nelle stanze
 
     public void change_name (View view){
 
@@ -175,6 +182,10 @@ public class MainActivity extends AppCompatActivity {
                 SharedPreferences.Editor editor = sharedpreferences.edit();
                 editor.putString(NameR1, name);
                 editor.apply();
+
+                if((Integer.parseInt(number))>1)
+
+                    spinner.setSelection(Integer.parseInt(string));
                 break;
             }
 
@@ -191,6 +202,7 @@ public class MainActivity extends AppCompatActivity {
                     SharedPreferences.Editor editor = sharedpreferences.edit();
                     editor.putString(NameR2, name);
                     editor.apply();
+
                 }
 
                 else{
@@ -201,6 +213,11 @@ public class MainActivity extends AppCompatActivity {
                     toast.show();
 
                 }
+
+                if((Integer.parseInt(number))>2)
+
+                    spinner.setSelection(Integer.parseInt(string));
+
 
                 break;
             }
@@ -274,145 +291,23 @@ Viceversa se sono "GONE" vengono resi visibili. */
 // esempio di come può essere creata un'activity da zero, cioè costruendo tutte le view. Non funziona per ora,
     // mi spara fuori
 
- /* public void  gotoRoom1(View view){
-      Intent intent= new Intent(this,Stanza1.class);
-      startActivity(intent);
-
-      TextView tv;
-      LinearLayout ll;
-
-      ll = new LinearLayout(this);
-      ll.setOrientation(android.widget.LinearLayout.VERTICAL);
-      ll.setLayoutParams(new ViewGroup.LayoutParams(-1,-1));
-      // ARGB: Opaque Red
-      ll.setBackgroundColor(0x88ff0000);
-
-      tv = new TextView(this);
-      tv.setLayoutParams(new ViewGroup.LayoutParams(-1,-2));
-      tv.setText("sample text goes here");
-      // ARGB: Opaque Green
-      tv.setBackgroundColor(0x5500ff00);
-      ll.addView(tv);
-
-      setContentView(R.layout.activity_stanza1);
-
-  }*/
 
     public void  gotoRoom1(View view){
         Intent intent= new Intent(this,Stanza1.class);
         startActivity(intent);
 
-        Button button;
-
-        button = findViewById(R.id.r1);
-        String name =button.getText().toString();
-
-        Intent nuovoTitolo = new Intent(this, Stanza1.class);
-        nuovoTitolo.putExtra("Titolo", name);
-        startActivity(nuovoTitolo);
     }
     public void  gotoRoom2(View view){
 
         Intent intent= new Intent(this,Stanza2.class);
         startActivity(intent);
 
-        Button button;
-        button = findViewById(R.id.r1);
-        String name =button.getText().toString();
-
-
-        Intent nuovoTitolo = new Intent(this, Stanza2.class);
-        nuovoTitolo.putExtra("Titolo", name);
-        startActivity(nuovoTitolo);
     }
     public void  gotoRoom3(View view){
         Intent intent= new Intent(this,Stanza3.class);
         startActivity(intent);
 
-
-        Button button;
-        button = findViewById(R.id.r1);
-        String name =button.getText().toString();
-        Intent nuovoTitolo = new Intent(this, Stanza3.class);
-        nuovoTitolo.putExtra("Titolo", name);
-        startActivity(nuovoTitolo);
     }
 
-
-
-    /* questa funzione permette settare il nome del bottone di una certa stanza
-
-   public void change_name(View view) {
-
-        Spinner spinner;
-        EditText editText;
-
-        editText = findViewById(R.id.name);
-        String name = editText.getText().toString();
-        spinner = findViewById(R.id.name_spinner);
-        String string = String.valueOf(spinner.getSelectedItem());
-
-        Spinner spinnerNumber = findViewById(R.id.planets_spinner);
-        String number = String.valueOf(spinnerNumber.getSelectedItem());
-
-        switch (string) {
-            case "1": {
-
-
-                Button b1 = findViewById(R.id.r1);
-                b1.setText(name);
-                break;
-            }
-
-            controlliamo che il numero selezionato nello spinner non sia maggiore del numero di stanze selezionato:
-            - estraiamo il numero di stanze inserito precedentemento e lo trasformiamo in un intero con la funzione Integer.paseInt()
-            - se il numero è magiore del valore del case corrente allora facciamo la modifica altrimento mostriamo un messaggio di errore
-
-            case "2": {
-
-               if((Integer.parseInt(number))>=2) {
-
-                    Button b2 = findViewById(R.id.r2);
-                    b2.setText(name);
-                }
-
-              else{
-
-                  CharSequence text = "Error: number of room selected exceded number of rooms";
-                  int duration = Toast.LENGTH_LONG;
-                  Toast toast = Toast.makeText(this,text,duration);
-                  toast.show();
-
-               }
-
-              break;
-            }
-
-            case "3": {
-
-                if((Integer.parseInt(number))>=3) {
-
-                    Button b3 = findViewById(R.id.r3);
-                    b3.setText(name);
-                }
-
-                else{
-                    CharSequence text = "Error: number of room selected exceded number of rooms";
-                    int duration = Toast.LENGTH_LONG;
-                    Toast toast = Toast.makeText(this,text,duration);
-                    toast.show();
-                }
-                break;
-            }
-
-        }
-
-        //per chiudere la tastiera alla pressione del bottone:
-        InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
-        imm.hideSoftInputFromWindow(findViewById(R.id.name).getWindowToken(), 0);
-
-
-    }
-*/
 
 }

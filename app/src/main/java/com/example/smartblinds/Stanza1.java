@@ -1,26 +1,32 @@
 package com.example.smartblinds;
 
 
-
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 
 public class Stanza1 extends AppCompatActivity {
 
     public static final String MyPREFERENCES = "MyPrefs" ;
     public static final String NameR1 = "nameroom1";
+    public static final String NRoller= "NumerOfRoller";
+    public static final String NameRoller1 ="NameOfRoller1";
+    public static final String NameRoller2 ="NameOfRoller2";
+    public static final String NameRoller3 ="NameOfRoller3";
+    public static final String NameRoller4 ="NameOfRoller4";
+    public static final String NameRoller5 ="NameOfRoller5";
+    public static final String NameRoller6 ="NameOfRoller6";
+
+
     SharedPreferences sharedpreferences;
 
     @Override
@@ -29,6 +35,15 @@ public class Stanza1 extends AppCompatActivity {
 
         setContentView(R.layout.activity_stanza1);
 
+        sharedpreferences = getSharedPreferences(MyPREFERENCES, MODE_PRIVATE);
+        // imposto un valore di default al numero di tapparelle (2)
+        String nu= sharedpreferences.getString(NRoller,"2");
+
+        // imposto un valore di default al numero di tapparelle nello spinner
+        Spinner spinner_number = findViewById(R.id.number_spinner_r1);
+        spinner_number.setSelection((Integer.parseInt(nu)) -1);
+
+
         Button b1 = findViewById(R.id.t1);
         Button b2 = findViewById(R.id.t2);
         Button b3 = findViewById(R.id.t3);
@@ -36,25 +51,71 @@ public class Stanza1 extends AppCompatActivity {
         Button b5 = findViewById(R.id.t5);
         Button b6 = findViewById(R.id.t6);
 
-        b1.setVisibility(View.GONE);
-        b2.setVisibility(View.GONE);
-        b3.setVisibility(View.GONE);
-        b4.setVisibility(View.GONE);
-        b5.setVisibility(View.GONE);
-        b6.setVisibility(View.GONE);
 
-     /*   //prendo l'intent e metto in name_of_activity la stringa passata
-        String name = getIntent().getExtras().getString("Titolo");
+        switch (nu) {
 
-        // prendo l'id della text view di cui voglio cambiare il nome
-        TextView title_of_activity= findViewById(R.id.title_of_activity_r1);
+            case "1": {
+                b1.setVisibility(View.VISIBLE);
+                b2.setVisibility(View.GONE);
+                b3.setVisibility(View.GONE);
+                b4.setVisibility(View.GONE);
+                b5.setVisibility(View.GONE);
+                b6.setVisibility(View.GONE);
+
+                break;
+            }
+            case "2": {
+                b1.setVisibility(View.VISIBLE);
+                b2.setVisibility(View.VISIBLE);
+                b3.setVisibility(View.GONE);
+                b4.setVisibility(View.GONE);
+                b5.setVisibility(View.GONE);
+                b6.setVisibility(View.GONE);
+
+                break;
+            }
+            case "3": {
+                b1.setVisibility(View.VISIBLE);
+                b2.setVisibility(View.VISIBLE);
+                b3.setVisibility(View.VISIBLE);
+                b4.setVisibility(View.GONE);
+                b5.setVisibility(View.GONE);
+                b6.setVisibility(View.GONE);
+
+                break;
+            }
+
+            case "4":{
+                b1.setVisibility(View.VISIBLE);
+                b2.setVisibility(View.VISIBLE);
+                b3.setVisibility(View.VISIBLE);
+                b4.setVisibility(View.VISIBLE);
+                b5.setVisibility(View.GONE);
+                b6.setVisibility(View.GONE);
+
+            }
+
+            case "5":{
+                b1.setVisibility(View.VISIBLE);
+                b2.setVisibility(View.VISIBLE);
+                b3.setVisibility(View.VISIBLE);
+                b4.setVisibility(View.VISIBLE);
+                b5.setVisibility(View.VISIBLE);
+                b6.setVisibility(View.GONE);
+            }
+
+            case "6":{
+                b1.setVisibility(View.VISIBLE);
+                b2.setVisibility(View.VISIBLE);
+                b3.setVisibility(View.VISIBLE);
+                b4.setVisibility(View.VISIBLE);
+                b5.setVisibility(View.VISIBLE);
+                b6.setVisibility(View.VISIBLE);
+            }
+        }
 
 
-        //applico il metodo .setText per settare il campo di testo della TextView con il nome passato dall'intent
-       title_of_activity.setText(name);
-
-      */
-        sharedpreferences = getSharedPreferences(MyPREFERENCES,MODE_PRIVATE);
+        //setto il titolo
 
         String n= sharedpreferences.getString("nameroom1",NameR1);
 
@@ -66,7 +127,7 @@ public class Stanza1 extends AppCompatActivity {
 
 
 
-    public void vis_r1(View view){
+    public void number_roller(View view){
 
         Button b1, b2, b3, b4, b5, b6;
 
@@ -89,6 +150,9 @@ public class Stanza1 extends AppCompatActivity {
                 b4.setVisibility(View.GONE);
                 b5.setVisibility(View.GONE);
                 b6.setVisibility(View.GONE);
+                SharedPreferences.Editor editor = sharedpreferences.edit();
+                editor.putString(NRoller,string);
+                editor.apply();
                 break;
 
             }
@@ -99,6 +163,9 @@ public class Stanza1 extends AppCompatActivity {
                 b4.setVisibility(View.GONE);
                 b5.setVisibility(View.GONE);
                 b6.setVisibility(View.GONE);
+                SharedPreferences.Editor editor = sharedpreferences.edit();
+                editor.putString(NRoller,string);
+                editor.apply();
                 break;
             }
             case "3": {
@@ -108,6 +175,9 @@ public class Stanza1 extends AppCompatActivity {
                 b4.setVisibility(View.GONE);
                 b5.setVisibility(View.GONE);
                 b6.setVisibility(View.GONE);
+                SharedPreferences.Editor editor = sharedpreferences.edit();
+                editor.putString(NRoller,string);
+                editor.apply();
                 break;
             }
 
@@ -118,6 +188,9 @@ public class Stanza1 extends AppCompatActivity {
                 b4.setVisibility(View.VISIBLE);
                 b5.setVisibility(View.GONE);
                 b6.setVisibility(View.GONE);
+                SharedPreferences.Editor editor = sharedpreferences.edit();
+                editor.putString(NRoller,string);
+                editor.apply();
                 break;
             }
             case "5":{
@@ -127,6 +200,9 @@ public class Stanza1 extends AppCompatActivity {
                 b4.setVisibility(View.VISIBLE);
                 b5.setVisibility(View.VISIBLE);
                 b6.setVisibility(View.GONE);
+                SharedPreferences.Editor editor = sharedpreferences.edit();
+                editor.putString(NRoller,string);
+                editor.apply();
                 break;
             }
             case "6":{
@@ -136,6 +212,9 @@ public class Stanza1 extends AppCompatActivity {
                 b4.setVisibility(View.VISIBLE);
                 b5.setVisibility(View.VISIBLE);
                 b6.setVisibility(View.VISIBLE);
+                SharedPreferences.Editor editor = sharedpreferences.edit();
+                editor.putString(NRoller,string);
+                editor.apply();
                 break;
             }
         }
@@ -191,6 +270,14 @@ public class Stanza1 extends AppCompatActivity {
             case "1": {
                 Button b1 = findViewById(R.id.t1);
                 b1.setText(name);
+                SharedPreferences.Editor editor = sharedpreferences.edit();
+                editor.putString(NameRoller1, name);
+                editor.apply();
+
+                if((Integer.parseInt(number))>1)
+
+                    spinner.setSelection(Integer.parseInt(string));
+
                 break;
             }
 
@@ -199,6 +286,9 @@ public class Stanza1 extends AppCompatActivity {
 
                     Button b2 = findViewById(R.id.t2);
                     b2.setText(name);
+                    SharedPreferences.Editor editor = sharedpreferences.edit();
+                    editor.putString(NameRoller2, name);
+                    editor.apply();
 
                 }
 
@@ -209,6 +299,10 @@ public class Stanza1 extends AppCompatActivity {
                     Toast toast = Toast.makeText(this,text,duration);
                     toast.show();
                 }
+
+                if((Integer.parseInt(number))>2)
+
+                    spinner.setSelection(Integer.parseInt(string));
 
 
 
@@ -220,6 +314,9 @@ public class Stanza1 extends AppCompatActivity {
                 if((Integer.parseInt(number))>=3){
                     Button b3 = findViewById(R.id.t3);
                     b3.setText(name);
+                    SharedPreferences.Editor editor = sharedpreferences.edit();
+                    editor.putString(NameRoller3, name);
+                    editor.apply();
                 }
                 else{
                     CharSequence text = "Error: number of roller selected exceded number of rollers";
@@ -227,6 +324,10 @@ public class Stanza1 extends AppCompatActivity {
                     Toast toast = Toast.makeText(this,text,duration);
                     toast.show();
                 }
+
+                if((Integer.parseInt(number))>3)
+
+                    spinner.setSelection(Integer.parseInt(string));
 
 
                 break;
@@ -235,7 +336,10 @@ public class Stanza1 extends AppCompatActivity {
 
                 if ((Integer.parseInt(number)) >= 4) {
                     Button b4 = findViewById(R.id.t4);
-                    b4.setText(name);
+                    b4.setText(name);SharedPreferences.Editor editor = sharedpreferences.edit();
+                    editor.putString(NameRoller4, name);
+                    editor.apply();
+
                 }
                 else{
                     CharSequence text = "Error: number of roller selected exceded number of rollers";
@@ -243,6 +347,9 @@ public class Stanza1 extends AppCompatActivity {
                     Toast toast = Toast.makeText(this,text,duration);
                     toast.show();
                 }
+                if((Integer.parseInt(number))>4)
+
+                    spinner.setSelection(Integer.parseInt(string));
                 break;
             }
             case "5": {
@@ -250,6 +357,9 @@ public class Stanza1 extends AppCompatActivity {
                 if((Integer.parseInt(number)) >= 5){
                     Button b5 = findViewById(R.id.t5);
                     b5.setText(name);
+                    SharedPreferences.Editor editor = sharedpreferences.edit();
+                    editor.putString(NameRoller5, name);
+                    editor.apply();
                 }
                 else {
                     CharSequence text = "Error: number of roller selected exceded number of rollers";
@@ -257,6 +367,10 @@ public class Stanza1 extends AppCompatActivity {
                     Toast toast = Toast.makeText(this,text,duration);
                     toast.show();
                 }
+
+                if((Integer.parseInt(number))>5)
+
+                    spinner.setSelection(Integer.parseInt(string));
                 break;
             }
             case "6": {
@@ -264,6 +378,9 @@ public class Stanza1 extends AppCompatActivity {
                 if((Integer.parseInt(number)) >= 6){
                     Button b6 = findViewById(R.id.t6);
                     b6.setText(name);
+                    SharedPreferences.Editor editor = sharedpreferences.edit();
+                    editor.putString(NameRoller6, name);
+                    editor.apply();
                 }
                 else {
                     CharSequence text = "Error: number of roller selected exceded number of rollers";
@@ -271,6 +388,9 @@ public class Stanza1 extends AppCompatActivity {
                     Toast toast = Toast.makeText(this,text,duration);
                     toast.show();
                 }
+                if((Integer.parseInt(number))>6)
+
+                    spinner.setSelection(Integer.parseInt(string));
                 break;
             }
 
@@ -286,15 +406,6 @@ public class Stanza1 extends AppCompatActivity {
         Intent intent= new Intent(this,Roller1.class);
         startActivity(intent);
 
-
-        Button button;
-
-        button = findViewById(R.id.t1);
-        String name =button.getText().toString();
-
-        Intent nuovoTitolo = new Intent(this, Roller1.class);
-        nuovoTitolo.putExtra("Titolo", name);
-        startActivity(nuovoTitolo);
     }
 
     /*
