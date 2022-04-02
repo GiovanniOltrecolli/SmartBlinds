@@ -20,8 +20,9 @@ public class MainActivity extends AppCompatActivity {
     public static final String NameR3 = "nameroom2";
     public static final String NRooms = "numberRooms";
     SharedPreferences sharedpreferences;
-    EditText editText;
-    Spinner spinner_number;
+    Button b1;
+    Button b2;
+    Button b3;
 
 
     @Override
@@ -29,58 +30,58 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-      /*  String n= sharedpreferences.getString("nameroom1","1");
-
-
-        Button b1;
-        Button b2;
-        Button b3;
+        sharedpreferences = getSharedPreferences(MyPREFERENCES, MODE_PRIVATE);
 
 
-        switch (n) {
+        String n= sharedpreferences.getString(NRooms,"1");
+        Spinner spinner_number = findViewById(R.id.planets_spinner);
+        spinner_number.setSelection((Integer.parseInt(n)) -1);
 
-            case "1": {
-                b3 = findViewById(R.id.r3);
-                b1 = findViewById(R.id.r1);
-                b2 = findViewById(R.id.r2);
-                b1.setVisibility(View.VISIBLE);
-                b2.setVisibility(View.GONE);
-                b3.setVisibility(View.GONE);
-                break;
+
+
+            switch (n) {
+
+                case "1": {
+                    b3 = findViewById(R.id.r3);
+                    b1 = findViewById(R.id.r1);
+                    b2 = findViewById(R.id.r2);
+                    b1.setVisibility(View.VISIBLE);
+                    b2.setVisibility(View.GONE);
+                    b3.setVisibility(View.GONE);
+                    break;
+                }
+                case "2": {
+                    b3 = findViewById(R.id.r3);
+                    b1 = findViewById(R.id.r1);
+                    b2 = findViewById(R.id.r2);
+                    b1.setVisibility(View.VISIBLE);
+                    b2.setVisibility(View.VISIBLE);
+                    b3.setVisibility(View.GONE);
+                    break;
+                }
+                case "3": {
+                    b3 = findViewById(R.id.r3);
+                    b1 = findViewById(R.id.r1);
+                    b2 = findViewById(R.id.r2);
+                    b1.setVisibility(View.VISIBLE);
+                    b2.setVisibility(View.VISIBLE);
+                    b3.setVisibility(View.VISIBLE);
+                    break;
+                }
             }
-            case "2": {
-                b3 = findViewById(R.id.r3);
-                b1 = findViewById(R.id.r1);
-                b2 = findViewById(R.id.r2);
-                b1.setVisibility(View.VISIBLE);
-                b2.setVisibility(View.VISIBLE);
-                b3.setVisibility(View.GONE);
-                break;
-            }
-            case "3": {
-                b3 = findViewById(R.id.r3);
-                b1 = findViewById(R.id.r1);
-                b2 = findViewById(R.id.r2);
-                b1.setVisibility(View.VISIBLE);
-                b2.setVisibility(View.VISIBLE);
-                b3.setVisibility(View.VISIBLE);
-                break;
-            }
-        }
 
-*/
+        String nameBotton1 = sharedpreferences.getString(NameR1,"Rooms 1");
+            b1.setText(nameBotton1);
 
+        String nameBotton2 = sharedpreferences.getString(NameR2,"Rooms 2");
+        b2.setText(nameBotton2);
 
-
-
-
+        String nameBotton3 = sharedpreferences.getString(NameR3,"Rooms 3");
+        b3.setText(nameBotton3);
 
 
 
     }
-    //  spinner_number.setSelection(n -1);
-
 
 
     public void vis (View view){
@@ -101,8 +102,9 @@ public class MainActivity extends AppCompatActivity {
                 b1.setVisibility(View.VISIBLE);
                 b2.setVisibility(View.GONE);
                 b3.setVisibility(View.GONE);
+                String n = String.valueOf(spinner.getSelectedItem());
                 SharedPreferences.Editor editor = sharedpreferences.edit();
-                editor.putInt(NRooms,1);
+                editor.putString(NRooms,n);
                 editor.apply();
                 break;
 
@@ -114,8 +116,9 @@ public class MainActivity extends AppCompatActivity {
                 b1.setVisibility(View.VISIBLE);
                 b2.setVisibility(View.VISIBLE);
                 b3.setVisibility(View.GONE);
+                String n = String.valueOf(spinner.getSelectedItem());
                 SharedPreferences.Editor editor = sharedpreferences.edit();
-                editor.putInt(NRooms,2);
+                editor.putString(NRooms,n);
                 editor.apply();
                 break;
             }
@@ -126,8 +129,9 @@ public class MainActivity extends AppCompatActivity {
                 b1.setVisibility(View.VISIBLE);
                 b2.setVisibility(View.VISIBLE);
                 b3.setVisibility(View.VISIBLE);
+                String n = String.valueOf(spinner.getSelectedItem());
                 SharedPreferences.Editor editor = sharedpreferences.edit();
-                editor.putInt(NRooms,3);
+                editor.putString(NRooms,n);
                 editor.apply();
                 break;
             }

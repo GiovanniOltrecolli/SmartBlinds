@@ -4,7 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/admin/AndroidStudioProjects/SmartBlinds/app/src/main/res/drawable/up.xml" value="0.31927083333333334" />
-        <entry key="..\:/Users/admin/AndroidStudioProjects/SmartBlinds/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/SmartBlinds/app/src/main/res/layout/activity_alarm_receiver.xml" value="0.3170289855072464" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/SmartBlinds/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/SmartBlinds/app/src/main/res/layout/activity_roller1.xml" value="0.24094202898550723" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/SmartBlinds/app/src/main/res/layout/activity_set_alarm.xml" value="0.24094202898550723" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/SmartBlinds/app/src/main/res/layout/activity_stanza1.xml" value="0.24094202898550723" />

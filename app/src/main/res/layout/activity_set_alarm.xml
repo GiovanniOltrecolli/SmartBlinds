@@ -22,73 +22,41 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/set_hours"
+        android:text="Imposta una data e un orario di apertura:"
         android:gravity="center"
         android:layout_marginStart="20dp"
         android:textSize="20dp">
 
     </TextView>
 
-    <LinearLayout
+    <DatePicker
+        android:id="@+id/datepicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:datePickerMode="spinner">
+
+    </DatePicker>
+
+    <TimePicker
+        android:id="@+id/timepicker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center"
+        android:timePickerMode="spinner" >
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/hours"
-            android:layout_gravity="center"
-            android:textSize="30sp">
+    </TimePicker>
 
-        </TextView>
-
-        <EditText
-            android:layout_width="100dp"
-            android:layout_height="wrap_content">
-
-        </EditText>
-
-
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="20dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/minutes"
-            android:layout_gravity="center"
-            android:textSize="30sp">
-
-        </TextView>
-
-        <EditText
-            android:layout_width="100dp"
-            android:layout_height="wrap_content">
-
-        </EditText>
-
-
-    </LinearLayout>
 
     <Button
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
+        android:onClick="Alarm"
+        android:layout_gravity="right"
         android:text="@string/button_enter"
         android:backgroundTint="@color/green">
 
     </Button>
-
-
-
 
 </LinearLayout>
