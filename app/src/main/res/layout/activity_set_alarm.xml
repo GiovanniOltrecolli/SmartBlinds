@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_gravity="center"
+        android:background="@color/green"
+        android:gravity="center"
+        android:text="@string/set_alarm"
+        android:textColor="@color/white"
+        android:textSize="32sp">
+
+    </TextView>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/set_hours"
+        android:gravity="center"
+        android:layout_marginStart="20dp"
+        android:textSize="20dp">
+
+    </TextView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hours"
+            android:layout_gravity="center"
+            android:textSize="30sp">
+
+        </TextView>
+
+        <EditText
+            android:layout_width="100dp"
+            android:layout_height="wrap_content">
+
+        </EditText>
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/minutes"
+            android:layout_gravity="center"
+            android:textSize="30sp">
+
+        </TextView>
+
+        <EditText
+            android:layout_width="100dp"
+            android:layout_height="wrap_content">
+
+        </EditText>
+
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="@string/button_enter"
+        android:backgroundTint="@color/green">
+
+    </Button>
+
+
+
+
+</LinearLayout>

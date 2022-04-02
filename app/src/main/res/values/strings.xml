@@ -1,3 +1,51 @@
 <resources>
     <string name="app_name">SmartBlinds</string>
+    <string name="button_enter">Enter</string>
+    <string name="goto_rooms1">Stanza 1</string>
+    <string name="goto_rooms2">Stanza 2</string>
+    <string name="goto_rooms3">Stanza 3</string>
+    <string name="allarm">Sveglia</string>
+    <string-array name="planets_array">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string name="title_home">My E-House</string>
+    <string-array name="roller_array">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+    <string name="Enter_name">Enter room name</string>
+    <string name="title_r1">Room 1</string>
+    <string name="goto_roller1">Roller shutter 1</string>
+    <string name="goto_roller2">Roller shutter 2</string>
+    <string name="goto_roller3">Roller shutter 3</string>
+    <string name="roller1_name">Roller shutter 1</string>
+    <string name="goto_roller4">Roller shutter 4</string>
+    <string name="goto_roller5">Roller shutter 5</string>
+    <string name="goto_roller6">Roller shutter 6</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="set_alarm">Set Alarm</string>
+    <string name="set_hours">Imposta un orario di apertura: </string>
+    <string name="hours">Hour</string>
+    <string name="minutes">Minutes</string>
 </resources>

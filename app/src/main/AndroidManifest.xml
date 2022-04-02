@@ -10,6 +10,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SmartBlinds">
         <activity
+            android:name=".SetAlarm"
+            android:exported="false" />
+        <activity
+            android:name=".Stanza3"
+            android:exported="false" />
+        <activity
+            android:name=".Roller1"
+            android:exported="false" />
+        <activity
+            android:name=".Stanza2"
+            android:exported="false" />
+        <activity
+            android:name=".Stanza1"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
