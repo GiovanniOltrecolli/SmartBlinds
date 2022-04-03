@@ -3,14 +3,21 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/admin/AndroidStudioProjects/SmartBlinds/app/src/main/res/drawable/up.xml" value="0.31927083333333334" />
-        <entry key="..\:/Users/admin/AndroidStudioProjects/SmartBlinds/app/src/main/res/layout/activity_alarm_receiver.xml" value="0.3170289855072464" />
-        <entry key="..\:/Users/admin/AndroidStudioProjects/SmartBlinds/app/src/main/res/layout/activity_main.xml" value="0.22" />
-        <entry key="..\:/Users/admin/AndroidStudioProjects/SmartBlinds/app/src/main/res/layout/activity_roller1.xml" value="0.24094202898550723" />
-        <entry key="..\:/Users/admin/AndroidStudioProjects/SmartBlinds/app/src/main/res/layout/activity_set_alarm.xml" value="0.24094202898550723" />
-        <entry key="..\:/Users/admin/AndroidStudioProjects/SmartBlinds/app/src/main/res/layout/activity_stanza1.xml" value="0.24094202898550723" />
-        <entry key="..\:/Users/admin/AndroidStudioProjects/SmartBlinds/app/src/main/res/layout/activity_stanza2.xml" value="0.24094202898550723" />
-        <entry key="..\:/Users/admin/AndroidStudioProjects/SmartBlinds/app/src/main/res/layout/activity_stanza3.xml" value="0.24094202898550723" />
+        <entry key="..\:/Users/smlsp/AndroidStudioProjects/SmartBlinds/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1365" />
+        <entry key="..\:/Users/smlsp/AndroidStudioProjects/SmartBlinds/app/src/main/res/drawable/alarm.xml" value="0.1365" />
+        <entry key="..\:/Users/smlsp/AndroidStudioProjects/SmartBlinds/app/src/main/res/drawable/down.xml" value="0.1365" />
+        <entry key="..\:/Users/smlsp/AndroidStudioProjects/SmartBlinds/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1365" />
+        <entry key="..\:/Users/smlsp/AndroidStudioProjects/SmartBlinds/app/src/main/res/drawable/ic_settings_image.xml" value="0.1365" />
+        <entry key="..\:/Users/smlsp/AndroidStudioProjects/SmartBlinds/app/src/main/res/drawable/up.xml" value="0.1365" />
+        <entry key="..\:/Users/smlsp/AndroidStudioProjects/SmartBlinds/app/src/main/res/layout/activity_alarm_receiver.xml" value="0.26222826086956524" />
+        <entry key="..\:/Users/smlsp/AndroidStudioProjects/SmartBlinds/app/src/main/res/layout/activity_main.xml" value="0.26222826086956524" />
+        <entry key="..\:/Users/smlsp/AndroidStudioProjects/SmartBlinds/app/src/main/res/layout/activity_roller1.xml" value="0.26222826086956524" />
+        <entry key="..\:/Users/smlsp/AndroidStudioProjects/SmartBlinds/app/src/main/res/layout/activity_set_alarm.xml" value="0.26222826086956524" />
+        <entry key="..\:/Users/smlsp/AndroidStudioProjects/SmartBlinds/app/src/main/res/layout/activity_stanza1.xml" value="0.12604166666666666" />
+        <entry key="..\:/Users/smlsp/AndroidStudioProjects/SmartBlinds/app/src/main/res/layout/activity_stanza2.xml" value="0.12604166666666666" />
+        <entry key="..\:/Users/smlsp/AndroidStudioProjects/SmartBlinds/app/src/main/res/layout/activity_stanza3.xml" value="0.12604166666666666" />
+        <entry key="..\:/Users/smlsp/AndroidStudioProjects/SmartBlinds/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
+        <entry key="..\:/Users/smlsp/AndroidStudioProjects/SmartBlinds/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1" />
       </map>
     </option>
   </component>
