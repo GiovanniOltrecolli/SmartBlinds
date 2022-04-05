@@ -38,89 +38,9 @@
             android:orientation="vertical">
 
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="18dp">
-
-
-                <Spinner
-                    android:id="@+id/number_spinner_r1"
-                    android:layout_width="70dp"
-                    android:layout_height="wrap_content"
-                    android:background="@color/white"
-                    android:entries="@array/roller_array"
-                    android:minHeight="48dp">
-
-                </Spinner>
-
-                <Button
-                    android:id="@+id/b_enter_r1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:onClick="number_roller"
-                    android:layout_marginRight="120dp"
-                    android:text="@string/button_enter"
-                    android:backgroundTint="@color/green">
-
-                </Button>
-
-
-                <ImageButton
-                    android:id="@+id/imageButton_r1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:minHeight="48dp"
-                    android:onClick="vis_settings_r1"
-                    app:srcCompat="@drawable/ic_settings_image"
-                    tools:ignore="SpeakableTextPresentCheck" >
-
-                </ImageButton>
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="18dp">
-
-                <Spinner
-                    android:id="@+id/name_spinner_r1"
-                    android:layout_width="70dp"
-                    android:layout_height="wrap_content"
-                    android:background="@color/white"
-                    android:entries="@array/roller_array"
-                    android:minHeight="48dp">
-
-                </Spinner>
-
-                <EditText
-                    android:id="@+id/name_r1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/Enter_name"
-                    android:minHeight="48dp">
-
-                </EditText>
-
-                <Button
-                    android:id="@+id/b_enter1_r1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="15dp"
-                    android:onClick="change_name_r1"
-                    android:text="@string/button_enter"
-                    android:backgroundTint="@color/green">
-
-                </Button>
 
 
 
-            </LinearLayout>
 
         </LinearLayout>
 

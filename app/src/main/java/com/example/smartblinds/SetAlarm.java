@@ -39,8 +39,8 @@ public class SetAlarm extends AppCompatActivity {
         int year = datepicker.getYear();
         int month = datepicker.getMonth();
         int day = datepicker.getDayOfMonth();
-       // int hour = timepicker.getHour();
-       // int minute = timepicker.getMinute();
+      // int hour = timepicker.getHour();
+       //int minute = timepicker.getMinute();
 
         Calendar calendar = Calendar.getInstance();
         calendar.set(Calendar.YEAR, year);

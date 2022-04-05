@@ -18,7 +18,7 @@ public class Stanza1 extends AppCompatActivity {
 
     public static final String MyPREFERENCES = "MyPrefs" ;
     public static final String NameR1 = "nameroom1";
-    public static final String NRoller= "NumerOfRoller";
+    public static final String NRollerRoom1= "NumerOfRollerRoom1";
     public static final String NameRoller1 ="NameOfRoller1";
     public static final String NameRoller2 ="NameOfRoller2";
     public static final String NameRoller3 ="NameOfRoller3";
@@ -37,11 +37,7 @@ public class Stanza1 extends AppCompatActivity {
 
         sharedpreferences = getSharedPreferences(MyPREFERENCES, MODE_PRIVATE);
         // imposto un valore di default al numero di tapparelle (2)
-        String nu= sharedpreferences.getString(NRoller,"2");
-
-        // imposto un valore di default al numero di tapparelle nello spinner
-        Spinner spinner_number = findViewById(R.id.number_spinner_r1);
-        spinner_number.setSelection((Integer.parseInt(nu)) -1);
+        String nu= sharedpreferences.getString(NRollerRoom1,"2");
 
 
         Button b1 = findViewById(R.id.t1);
@@ -123,11 +119,33 @@ public class Stanza1 extends AppCompatActivity {
 
         title_of_activity.setText(n);
 
+        // imposto un valore di default del nome dei bottoni delle stanze
+
+        String nameBotton1 = sharedpreferences.getString(NameRoller1,"NameOfRoller1");
+        b1.setText(nameBotton1);
+
+        String nameBotton2 = sharedpreferences.getString(NameRoller2,"NameOfRoller2");
+        b2.setText(nameBotton2);
+
+        String nameBotton3 = sharedpreferences.getString(NameRoller3,"NameOfRoller3");
+        b3.setText(nameBotton3);
+
+        String nameBotton4 = sharedpreferences.getString(NameRoller4,"NameOfRoller4");
+        b4.setText(nameBotton4);
+
+        String nameBotton5 = sharedpreferences.getString(NameRoller5,"NameOfRoller5");
+        b5.setText(nameBotton5);
+
+        String nameBotton6 = sharedpreferences.getString(NameRoller6,"NameOfRoller6");
+        b6.setText(nameBotton6);
+
+
+
     }
 
 
 
-    public void number_roller(View view){
+ /*   public void number_roller(View view){
 
         Button b1, b2, b3, b4, b5, b6;
 
@@ -151,7 +169,7 @@ public class Stanza1 extends AppCompatActivity {
                 b5.setVisibility(View.GONE);
                 b6.setVisibility(View.GONE);
                 SharedPreferences.Editor editor = sharedpreferences.edit();
-                editor.putString(NRoller,string);
+                editor.putString(NRollerRoom1,string);
                 editor.apply();
                 break;
 
@@ -164,7 +182,7 @@ public class Stanza1 extends AppCompatActivity {
                 b5.setVisibility(View.GONE);
                 b6.setVisibility(View.GONE);
                 SharedPreferences.Editor editor = sharedpreferences.edit();
-                editor.putString(NRoller,string);
+                editor.putString(NRollerRoom1,string);
                 editor.apply();
                 break;
             }
@@ -176,7 +194,7 @@ public class Stanza1 extends AppCompatActivity {
                 b5.setVisibility(View.GONE);
                 b6.setVisibility(View.GONE);
                 SharedPreferences.Editor editor = sharedpreferences.edit();
-                editor.putString(NRoller,string);
+                editor.putString(NRollerRoom1,string);
                 editor.apply();
                 break;
             }
@@ -189,7 +207,7 @@ public class Stanza1 extends AppCompatActivity {
                 b5.setVisibility(View.GONE);
                 b6.setVisibility(View.GONE);
                 SharedPreferences.Editor editor = sharedpreferences.edit();
-                editor.putString(NRoller,string);
+                editor.putString(NRollerRoom1,string);
                 editor.apply();
                 break;
             }
@@ -201,7 +219,7 @@ public class Stanza1 extends AppCompatActivity {
                 b5.setVisibility(View.VISIBLE);
                 b6.setVisibility(View.GONE);
                 SharedPreferences.Editor editor = sharedpreferences.edit();
-                editor.putString(NRoller,string);
+                editor.putString(NRollerRoom1,string);
                 editor.apply();
                 break;
             }
@@ -213,7 +231,7 @@ public class Stanza1 extends AppCompatActivity {
                 b5.setVisibility(View.VISIBLE);
                 b6.setVisibility(View.VISIBLE);
                 SharedPreferences.Editor editor = sharedpreferences.edit();
-                editor.putString(NRoller,string);
+                editor.putString(NRollerRoom1,string);
                 editor.apply();
                 break;
             }
@@ -399,6 +417,8 @@ public class Stanza1 extends AppCompatActivity {
 
     }
 
+  */
+
 
 
     public void gotoRoller1(View view) {
@@ -408,40 +428,20 @@ public class Stanza1 extends AppCompatActivity {
 
     }
 
-    /*
+
     public void gotoRoller2(View view) {
 
         Intent intent= new Intent(this,Roller2.class);
         startActivity(intent);
 
 
-        Button button;
-
-        button = findViewById(R.id.t2);
-        String name =button.getText().toString();
-
-        Intent nuovoTitolo = new Intent(this, Roller2.class);
-        nuovoTitolo.putExtra("Titolo", name);
-        startActivity(nuovoTitolo);
     }
 
     public void gotoRoller3(View view) {
 
         Intent intent= new Intent(this,Roller3.class);
         startActivity(intent);
-
-
-        Button button;
-
-        button = findViewById(R.id.t3);
-        String name =button.getText().toString();
-
-        Intent nuovoTitolo = new Intent(this, Roller3.class);
-        nuovoTitolo.putExtra("Titolo", name);
-        startActivity(nuovoTitolo);
     }
-
-*/
 
 
 }

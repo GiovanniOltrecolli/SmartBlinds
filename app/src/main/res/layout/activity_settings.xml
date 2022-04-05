@@ -1,0 +1,326 @@
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/green"
+        android:orientation="horizontal"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Settings"
+            android:textColor="@color/white"
+            android:textSize="32sp">
+
+        </TextView>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="15dp">
+
+        <!-- Text view: Numero di stanze-->
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="59dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:text="Seleziona il numero di stanze:"
+            android:textSize="20dp">
+
+        </TextView>
+
+
+        <Spinner
+            android:id="@+id/planets_spinner"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:background="@color/white"
+            android:entries="@array/planets_array"
+            android:minHeight="48dp">
+
+        </Spinner>
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="300dp"
+        android:layout_height="1dp"
+        android:layout_gravity="center">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            android:backgroundTint="@color/green" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="59dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="15dp"
+        android:text="Cambia nome ad ogni stanza:"
+        android:textSize="20dp">
+
+    </TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="15dp">
+
+        <Spinner
+            android:id="@+id/name_spinner"
+            android:layout_width="46dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            android:entries="@array/planets_array"
+            android:minHeight="48dp">
+
+        </Spinner>
+
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/Enter_name"
+            android:minHeight="48dp"
+            android:layout_marginLeft="15dp">
+
+        </EditText>
+
+
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="15dp"
+            android:text="Save"
+            android:onClick="ChangeName">
+
+        </Button>
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="300dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center">
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="59dp"
+        android:layout_marginTop="25dp"
+        android:text="Seleziona il numero di tapparelle per stanza :"
+        android:textSize="20dp">
+
+    </TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stanza: "
+            android:textSize="20sp"
+            android:layout_gravity="center">
+
+        </TextView>
+
+
+        <Spinner
+            android:id="@+id/spinner_1"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_gravity="center"
+            android:entries="@array/planets_array"
+            android:minHeight="48dp">
+
+        </Spinner>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Numero: "
+            android:textSize="20sp"
+            android:layout_gravity="center">
+
+        </TextView>
+
+        <Spinner
+            android:id="@+id/spinner_2"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_gravity="center"
+            android:entries="@array/roller_array"
+            android:minHeight="48dp">
+
+        </Spinner>
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:text="Save"
+            android:layout_marginLeft="7dp"
+            android:onClick="NumberRoller">
+
+        </Button>
+
+
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="300dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center">
+
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="59dp"
+        android:layout_marginTop="25dp"
+        android:text="Cambia il nome delle tapparelle :"
+        android:textSize="20dp">
+
+    </TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="15dp">
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stanza: "
+            android:textSize="20sp"
+            android:layout_gravity="center">
+
+        </TextView>
+
+
+        <Spinner
+            android:id="@+id/n"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_gravity="center"
+            android:entries="@array/planets_array"
+            android:minHeight="48dp">
+
+        </Spinner>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tapparella: "
+            android:textSize="20sp"
+            android:layout_gravity="center">
+
+        </TextView>
+
+        <Spinner
+            android:id="@+id/nr"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_gravity="center"
+            android:entries="@array/roller_array"
+            android:minHeight="48dp">
+
+        </Spinner>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/name_roller"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/Enter_name"
+            android:minHeight="48dp"
+            android:layout_marginLeft="15dp">
+
+        </EditText>
+
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="15dp"
+            android:text="Save"
+            android:onClick="ChangeNameRoller">
+
+        </Button>
+
+
+    </LinearLayout>
+
+
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="58dp"
+        android:layout_marginTop="20dp"
+        android:text="Save All"
+        android:onClick="SaveAll"
+        android:layout_gravity="center">
+
+    </Button>
+
+
+
+</LinearLayout>
+
+
+
+
+</ScrollView>

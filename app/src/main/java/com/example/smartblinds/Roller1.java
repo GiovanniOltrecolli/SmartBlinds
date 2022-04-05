@@ -62,12 +62,11 @@ public class Roller1 extends AppCompatActivity {
 
     }
 
-    public void MyAlarm(){
+    public void MyAlarm(View view){
 
         Intent intent =new Intent(this, SetAlarm.class);
 
         startActivity(intent);
-
 
     }
 

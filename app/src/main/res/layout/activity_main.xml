@@ -3,13 +3,13 @@
 
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -22,128 +22,29 @@
             android:orientation="vertical"
             android:layout_marginTop="50dp">
 
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="18dp">
-
-
-                <Spinner
-                    android:id="@+id/planets_spinner"
-                    android:layout_width="70dp"
-                    android:layout_height="wrap_content"
-                    android:background="@color/white"
-                    android:entries="@array/planets_array"
-                    android:minHeight="48dp">
-
-                </Spinner>
-
-                <Button
-                    android:id="@+id/b_enter"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:onClick="number_rooms"
-                    android:layout_marginRight="120dp"
-                    android:text="@string/button_enter"
-                    android:backgroundTint="@color/green">
-
-                </Button>
-
-
-
-                <ImageButton
-                    android:id="@+id/imageButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:minHeight="48dp"
-                    android:onClick="vis_settings"
-                    tools:ignore="SpeakableTextPresentCheck" >
-
-                </ImageButton>
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="18dp">
-
-                <Spinner
-                    android:id="@+id/name_spinner"
-                    android:layout_width="70dp"
-                    android:layout_height="wrap_content"
-                    android:background="@color/white"
-                    android:entries="@array/planets_array"
-                    android:minHeight="48dp">
-
-                </Spinner>
-
-                <EditText
-                    android:id="@+id/name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/Enter_name"
-                    android:minHeight="48dp">
-
-                </EditText>
-
-                <Button
-                    android:id="@+id/b_enter1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="15dp"
-                    android:backgroundTint="@color/green"
-                    android:onClick="change_name"
-                    android:text="@string/button_enter">
-
-                </Button>
-
-
-
-            </LinearLayout>
-
         </LinearLayout>
 
 
-
         <Button
-            android:id="@+id/r1"
-            android:layout_width="285dp"
-            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
             android:layout_gravity="center"
-            android:layout_marginTop="50dp"
-            android:onClick="gotoRoom1"
-            android:backgroundTint="@color/green"
-            android:text="@string/goto_rooms1">
+            android:onClick="GoToSettings"
+            android:text="Settings">
 
         </Button>
 
+
         <Button
-            android:id="@+id/r2"
-            android:layout_width="285dp"
-            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
             android:layout_gravity="center"
-            android:onClick="gotoRoom2"
-            android:backgroundTint="@color/green"
-            android:text="@string/goto_rooms2">
+            android:onClick="GoToRooms"
+            android:text="Rooms">
 
         </Button>
 
-        <Button
-            android:id="@+id/r3"
-            android:layout_width="285dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:onClick="gotoRoom3"
-            android:backgroundTint="@color/green"
-            android:text="@string/goto_rooms3">
 
-        </Button>
 
     </LinearLayout>
 
