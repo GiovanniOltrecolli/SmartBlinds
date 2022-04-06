@@ -191,7 +191,7 @@ public class Settings extends AppCompatActivity {
 
                 }
                 else{
-                    CharSequence text = "Error: number of room selected exceded number of rooms";
+                    CharSequence text = "Error: number of room selected exceeded number of rooms";
                     int duration = Toast.LENGTH_LONG;
                     Toast toast = Toast.makeText(this,text,duration);
                     toast.show();
@@ -208,7 +208,7 @@ public class Settings extends AppCompatActivity {
 
                 }
                 else{
-                    CharSequence text = "Error: number of room selected exceded number of rooms";
+                    CharSequence text = "Error: number of room selected exceeded number of rooms";
                     int duration = Toast.LENGTH_LONG;
                     Toast toast = Toast.makeText(this,text,duration);
                     toast.show();
@@ -248,6 +248,7 @@ public class Settings extends AppCompatActivity {
 
             case "1": {
                 String number_of_roller = sharedpreferences.getString(NRollerRoom1,"NumberOfRollerRoom1");
+
                 switch (roller) {
                     case "1": {
 
@@ -277,12 +278,10 @@ public class Settings extends AppCompatActivity {
                                 spinner_roller.setSelection(2);
 
                             }
-
-
                         }
 
                         else {
-                            CharSequence text = "Error: number of roller selected exceded number of rollers";
+                            CharSequence text = "Error: number of roller selected exceeded number of rollers";
                             int duration = Toast.LENGTH_LONG;
                             Toast toast = Toast.makeText(this,text,duration);
                             toast.show();
@@ -308,7 +307,7 @@ public class Settings extends AppCompatActivity {
 
                         }
                         else{
-                            CharSequence text = "Error: number of roller selected exceded number of rollers";
+                            CharSequence text = "Error: number of roller selected exceeded number of rollers";
                             int duration = Toast.LENGTH_LONG;
                             Toast toast = Toast.makeText(this,text,duration);
                             toast.show();
@@ -333,7 +332,7 @@ public class Settings extends AppCompatActivity {
                         }
 
                         else{
-                            CharSequence text = "Error: number of roller selected exceded number of rollers";
+                            CharSequence text = "Error: number of roller selected exceeded number of rollers";
                             int duration = Toast.LENGTH_LONG;
                             Toast toast = Toast.makeText(this,text,duration);
                             toast.show();
@@ -357,11 +356,12 @@ public class Settings extends AppCompatActivity {
                         }
 
                         else {
-                            CharSequence text = "Error: number of roller selected exceded number of rollers";
+                            CharSequence text = "Error: number of roller selected exceeded number of rollers";
                             int duration = Toast.LENGTH_LONG;
                             Toast toast = Toast.makeText(this,text,duration);
                             toast.show();
                         }
+
                         break;
                     }
                     case "6": {
@@ -374,7 +374,7 @@ public class Settings extends AppCompatActivity {
                         }
 
                        else {
-                            CharSequence text = "Error: number of roller selected exceded number of rollers";
+                            CharSequence text = "Error: number of roller selected exceeded number of rollers";
                             int duration = Toast.LENGTH_LONG;
                             Toast toast = Toast.makeText(this,text,duration);
                             toast.show();
@@ -382,6 +382,7 @@ public class Settings extends AppCompatActivity {
 
 
                         break;
+
                     }
 
 
@@ -420,9 +421,8 @@ public class Settings extends AppCompatActivity {
                                     spinner_roller.setSelection(2);
                                 }
 
-                            }
-                            else {
-                                CharSequence text = "Error: number of roller selected exceded number of rollers";
+                            } else {
+                                CharSequence text = "Error: number of roller selected exceeded number of rollers";
                                 int duration = Toast.LENGTH_LONG;
                                 Toast toast = Toast.makeText(this, text, duration);
                                 toast.show();
@@ -444,9 +444,8 @@ public class Settings extends AppCompatActivity {
 
                                     spinner_roller.setSelection(3);
                                 }
-                            }
-                            else {
-                                CharSequence text = "Error: number of roller selected exceded number of rollers";
+                            } else {
+                                CharSequence text = "Error: number of roller selected exceeded number of rollers";
                                 int duration = Toast.LENGTH_LONG;
                                 Toast toast = Toast.makeText(this, text, duration);
                                 toast.show();
@@ -467,9 +466,8 @@ public class Settings extends AppCompatActivity {
 
                                     spinner_roller.setSelection(4);
                                 }
-                            }
-                            else {
-                                CharSequence text = "Error: number of roller selected exceded number of rollers";
+                            } else {
+                                CharSequence text = "Error: number of roller selected exceeded number of rollers";
                                 int duration = Toast.LENGTH_LONG;
                                 Toast toast = Toast.makeText(this, text, duration);
                                 toast.show();
@@ -489,9 +487,8 @@ public class Settings extends AppCompatActivity {
 
                                     spinner_roller.setSelection(5);
                                 }
-                            }
-                            else {
-                                CharSequence text = "Error: number of roller selected exceded number of rollers";
+                            } else {
+                                CharSequence text = "Error: number of roller selected exceeded number of rollers";
                                 int duration = Toast.LENGTH_LONG;
                                 Toast toast = Toast.makeText(this, text, duration);
                                 toast.show();
@@ -501,46 +498,45 @@ public class Settings extends AppCompatActivity {
                         }
                         case "6": {
 
-                        }
-                        if (Integer.parseInt(number_of_roller) >= 6) {
+                            if (Integer.parseInt(number_of_roller) >= 6) {
 
-                            SharedPreferences.Editor editor = sharedpreferences.edit();
-                            editor.putString(NameRoller6Room2, name);
-                            editor.apply();
-                            editText.setText("");
+                                SharedPreferences.Editor editor = sharedpreferences.edit();
+                                editor.putString(NameRoller6Room2, name);
+                                editor.apply();
+                                editText.setText("");
 
-                            if ((Integer.parseInt(number_of_roller)) > 6) {
+                                if ((Integer.parseInt(number_of_roller)) > 6) {
 
-                                spinner_roller.setSelection(6);
+                                    spinner_roller.setSelection(6);
+                                }
+
+                            } else {
+                                CharSequence text = "Error: number of roller selected exceeded number of rollers";
+                                int duration = Toast.LENGTH_LONG;
+                                Toast toast = Toast.makeText(this, text, duration);
+                                toast.show();
                             }
 
+                            break;
                         }
-                        else {
-                            CharSequence text = "Error: number of roller selected exceded number of rollers";
-                            int duration = Toast.LENGTH_LONG;
-                            Toast toast = Toast.makeText(this, text, duration);
-                            toast.show();
-                        }
-
-                        break;
                     }
-
-
                 }
+
+
+
                 else{
-                    CharSequence text = "Error: number of room selected exceded number of rooms";
+                    CharSequence text = "Error: number of room selected exceeded number of rooms";
                     int duration = Toast.LENGTH_LONG;
                     Toast toast = Toast.makeText(this,text,duration);
                     toast.show();
                 }
+                break;
             }
 
 
 
-
-
             case "3": {
-                if (n_r >= 3) {
+                if (n_r == 3) {
                     String number_of_roller = sharedpreferences.getString(NRollerRoom3, "NumberOfRollerRoom3");
                     switch (roller) {
                         case "1": {
@@ -550,27 +546,31 @@ public class Settings extends AppCompatActivity {
                             editor.apply();
                             editText.setText("");
 
+                            // se il numero di tapparelle scelto per la stanza 3 è maggiore di 1 allora incremento la selezione del roller
+
                             if ((Integer.parseInt(number_of_roller)) > 1) {
 
                                 spinner_roller.setSelection(1);
                             }
 
-
                             break;
                         }
 
                         case "2": {
+
                             if (Integer.parseInt(number_of_roller) >= 2) {
                                 SharedPreferences.Editor editor = sharedpreferences.edit();
                                 editor.putString(NameRoller2Room3, name);
                                 editor.apply();
                                 editText.setText("");
+
                                 if ((Integer.parseInt(number_of_roller)) > 2) {
 
                                     spinner_roller.setSelection(2);
                                 }
-                            } else {
-                                CharSequence text = "Error: number of roller selected exceded number of rollers";
+                            }
+                            else {
+                                CharSequence text = "Error: number of roller selected exceeded number of rollers";
                                 int duration = Toast.LENGTH_LONG;
                                 Toast toast = Toast.makeText(this, text, duration);
                                 toast.show();
@@ -590,8 +590,9 @@ public class Settings extends AppCompatActivity {
 
                                     spinner_roller.setSelection(3);
                                 }
-                            } else {
-                                CharSequence text = "Error: number of roller selected exceded number of rollers";
+                            }
+                            else {
+                                CharSequence text = "Error: number of roller selected exceeded number of rollers";
                                 int duration = Toast.LENGTH_LONG;
                                 Toast toast = Toast.makeText(this, text, duration);
                                 toast.show();
@@ -611,8 +612,9 @@ public class Settings extends AppCompatActivity {
 
                                     spinner_roller.setSelection(4);
                                 }
-                            } else {
-                                CharSequence text = "Error: number of roller selected exceded number of rollers";
+                            }
+                            else {
+                                CharSequence text = "Error: number of roller selected exceeded number of rollers";
                                 int duration = Toast.LENGTH_LONG;
                                 Toast toast = Toast.makeText(this, text, duration);
                                 toast.show();
@@ -633,8 +635,9 @@ public class Settings extends AppCompatActivity {
                                     spinner_roller.setSelection(5);
                                 }
 
-                            } else {
-                                CharSequence text = "Error: number of roller selected exceded number of rollers";
+                            }
+                            else {
+                                CharSequence text = "Error: number of roller selected exceeded number of rollers";
                                 int duration = Toast.LENGTH_LONG;
                                 Toast toast = Toast.makeText(this, text, duration);
                                 toast.show();
@@ -644,18 +647,16 @@ public class Settings extends AppCompatActivity {
                         }
                         case "6": {
 
-                            if (Integer.parseInt(number_of_roller) >= 6) {
+                            if (Integer.parseInt(number_of_roller) == 6) {
 
                                 SharedPreferences.Editor editor = sharedpreferences.edit();
                                 editor.putString(NameRoller6Room3, name);
                                 editor.apply();
                                 editText.setText("");
-                                if ((Integer.parseInt(number_of_roller)) > 6) {
 
-                                    spinner_roller.setSelection(6);
-                                }
-                            } else {
-                                CharSequence text = "Error: number of roller selected exceded number of rollers";
+                            }
+                            else {
+                                CharSequence text = "Error: number of roller selected exceeded number of rollers";
                                 int duration = Toast.LENGTH_LONG;
                                 Toast toast = Toast.makeText(this, text, duration);
                                 toast.show();
@@ -666,11 +667,12 @@ public class Settings extends AppCompatActivity {
                 }
 
                 else{
-                    CharSequence text = "Error: number of room selected exceded number of rooms";
+                    CharSequence text = "Error: number of ROOMS selected exceeded number of rooms";
                     int duration = Toast.LENGTH_LONG;
                     Toast toast = Toast.makeText(this, text, duration);
                     toast.show();
                 }
+                break;
 
             }
 

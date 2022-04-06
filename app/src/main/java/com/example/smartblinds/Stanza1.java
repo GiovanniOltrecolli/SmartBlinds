@@ -18,7 +18,7 @@ public class Stanza1 extends AppCompatActivity {
 
     public static final String MyPREFERENCES = "MyPrefs" ;
     public static final String NameR1 = "nameroom1";
-    public static final String NRollerRoom1= "NumerOfRollerRoom1";
+    public static final String NRollerRoom1= "NumberOfRollerRoom1";
     public static final String NameRoller1Room1 ="NameOfRoller1Room1";
     public static final String NameRoller2Room1 ="NameOfRoller2Room1";
     public static final String NameRoller3Room1 ="NameOfRoller3Room1";
@@ -37,7 +37,7 @@ public class Stanza1 extends AppCompatActivity {
 
         sharedpreferences = getSharedPreferences(MyPREFERENCES, MODE_PRIVATE);
         // imposto un valore di default al numero di tapparelle (2)
-        String nu= sharedpreferences.getString(NRollerRoom1,"2");
+        String nu= sharedpreferences.getString(NRollerRoom1,"NumberOfRollerRoom1");
 
 
         Button b1 = findViewById(R.id.t1);

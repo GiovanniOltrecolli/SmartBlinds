@@ -26,7 +26,7 @@ public class Roller1 extends AppCompatActivity {
 
         sharedpreferences = getSharedPreferences(MyPREFERENCES, MODE_PRIVATE);
 
-        String n= sharedpreferences.getString("NameOfRoller1",NameRoller1);
+        String n= sharedpreferences.getString(NameRoller1,"NameOfRoller1");
 
         TextView title_of_activity= findViewById(R.id.tile_roller1);
 
