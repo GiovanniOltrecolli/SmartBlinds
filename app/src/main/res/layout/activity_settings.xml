@@ -24,7 +24,7 @@
             android:gravity="center"
             android:text="Settings"
             android:textColor="@color/white"
-            android:textSize="32sp">
+            android:textSize="30sp">
 
         </TextView>
 
@@ -42,20 +42,17 @@
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="59dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="15dp"
             android:text="Seleziona il numero di stanze:"
-            android:textSize="20dp">
+            android:textSize="15dp">
 
         </TextView>
-
 
         <Spinner
             android:id="@+id/planets_spinner"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
             android:layout_marginLeft="30dp"
             android:background="@color/white"
             android:entries="@array/planets_array"
@@ -74,16 +71,16 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="?android:attr/listDivider"
-            android:backgroundTint="@color/green" />
+            android:layout_marginTop="15dp"/>
     </androidx.cardview.widget.CardView>
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="59dp"
-        android:layout_marginTop="30dp"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
         android:text="Cambia nome ad ogni stanza:"
-        android:textSize="20dp">
+        android:textSize="15dp">
 
     </TextView>
 
@@ -131,17 +128,16 @@
     <androidx.cardview.widget.CardView
         android:layout_width="300dp"
         android:layout_height="1dp"
-        android:layout_marginTop="20dp"
         android:layout_gravity="center">
 
     </androidx.cardview.widget.CardView>
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="59dp"
-        android:layout_marginTop="25dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
         android:text="Seleziona il numero di tapparelle per stanza :"
-        android:textSize="20dp">
+        android:textSize="15dp">
 
     </TextView>
 
@@ -155,7 +151,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Stanza: "
-            android:textSize="20sp"
+            android:textSize="12sp"
             android:layout_gravity="center">
 
         </TextView>
@@ -168,7 +164,8 @@
             android:background="@color/white"
             android:layout_gravity="center"
             android:entries="@array/planets_array"
-            android:minHeight="48dp">
+            android:minHeight="48dp"
+            android:textSize="12sp">
 
         </Spinner>
 
@@ -176,7 +173,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Numero: "
-            android:textSize="20sp"
+            android:textSize="12sp"
             android:layout_gravity="center">
 
         </TextView>
@@ -216,10 +213,10 @@
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="59dp"
-        android:layout_marginTop="25dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
         android:text="Cambia il nome delle tapparelle :"
-        android:textSize="20dp">
+        android:textSize="15sp">
 
     </TextView>
 
@@ -235,7 +232,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Stanza: "
-            android:textSize="20sp"
+            android:textSize="12sp"
             android:layout_gravity="center">
 
         </TextView>
@@ -256,7 +253,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Tapparella: "
-            android:textSize="20sp"
+            android:textSize="12sp"
             android:layout_gravity="center">
 
         </TextView>

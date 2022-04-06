@@ -19,12 +19,12 @@ public class Stanza1 extends AppCompatActivity {
     public static final String MyPREFERENCES = "MyPrefs" ;
     public static final String NameR1 = "nameroom1";
     public static final String NRollerRoom1= "NumerOfRollerRoom1";
-    public static final String NameRoller1 ="NameOfRoller1";
-    public static final String NameRoller2 ="NameOfRoller2";
-    public static final String NameRoller3 ="NameOfRoller3";
-    public static final String NameRoller4 ="NameOfRoller4";
-    public static final String NameRoller5 ="NameOfRoller5";
-    public static final String NameRoller6 ="NameOfRoller6";
+    public static final String NameRoller1Room1 ="NameOfRoller1Room1";
+    public static final String NameRoller2Room1 ="NameOfRoller2Room1";
+    public static final String NameRoller3Room1 ="NameOfRoller3Room1";
+    public static final String NameRoller4Room1 ="NameOfRoller4Room1";
+    public static final String NameRoller5Room1 ="NameOfRoller5Room1";
+    public static final String NameRoller6Room1 ="NameOfRoller6Room1";
 
 
     SharedPreferences sharedpreferences;
@@ -121,305 +121,27 @@ public class Stanza1 extends AppCompatActivity {
 
         // imposto un valore di default del nome dei bottoni delle stanze
 
-        String nameBotton1 = sharedpreferences.getString(NameRoller1,"NameOfRoller1");
+        String nameBotton1 = sharedpreferences.getString(NameRoller1Room1,"NameOfRoller1Room1");
         b1.setText(nameBotton1);
 
-        String nameBotton2 = sharedpreferences.getString(NameRoller2,"NameOfRoller2");
+        String nameBotton2 = sharedpreferences.getString(NameRoller2Room1,"NameOfRoller2Room1");
         b2.setText(nameBotton2);
 
-        String nameBotton3 = sharedpreferences.getString(NameRoller3,"NameOfRoller3");
+        String nameBotton3 = sharedpreferences.getString(NameRoller3Room1,"NameOfRoller3Room1");
         b3.setText(nameBotton3);
 
-        String nameBotton4 = sharedpreferences.getString(NameRoller4,"NameOfRoller4");
+        String nameBotton4 = sharedpreferences.getString(NameRoller4Room1,"NameOfRoller4Room1");
         b4.setText(nameBotton4);
 
-        String nameBotton5 = sharedpreferences.getString(NameRoller5,"NameOfRoller5");
+        String nameBotton5 = sharedpreferences.getString(NameRoller5Room1,"NameOfRoller5Room1");
         b5.setText(nameBotton5);
 
-        String nameBotton6 = sharedpreferences.getString(NameRoller6,"NameOfRoller6");
+        String nameBotton6 = sharedpreferences.getString(NameRoller6Room1,"NameOfRoller6Room1");
         b6.setText(nameBotton6);
 
 
 
     }
-
-
-
- /*   public void number_roller(View view){
-
-        Button b1, b2, b3, b4, b5, b6;
-
-
-        Spinner spinner = findViewById(R.id.number_spinner_r1);
-        String string = String.valueOf(spinner.getSelectedItem());
-        b3 = findViewById(R.id.t3);
-        b1 = findViewById(R.id.t1);
-        b2 = findViewById(R.id.t2);
-        b4 = findViewById(R.id.t4);
-        b5 = findViewById(R.id.t5);
-        b6 = findViewById(R.id.t6);
-
-        switch(string){
-
-            case "1" :{
-                b1.setVisibility(View.VISIBLE);
-                b2.setVisibility(View.GONE);
-                b3.setVisibility(View.GONE);
-                b4.setVisibility(View.GONE);
-                b5.setVisibility(View.GONE);
-                b6.setVisibility(View.GONE);
-                SharedPreferences.Editor editor = sharedpreferences.edit();
-                editor.putString(NRollerRoom1,string);
-                editor.apply();
-                break;
-
-            }
-            case "2": {
-                b1.setVisibility(View.VISIBLE);
-                b2.setVisibility(View.VISIBLE);
-                b3.setVisibility(View.GONE);
-                b4.setVisibility(View.GONE);
-                b5.setVisibility(View.GONE);
-                b6.setVisibility(View.GONE);
-                SharedPreferences.Editor editor = sharedpreferences.edit();
-                editor.putString(NRollerRoom1,string);
-                editor.apply();
-                break;
-            }
-            case "3": {
-                b1.setVisibility(View.VISIBLE);
-                b2.setVisibility(View.VISIBLE);
-                b3.setVisibility(View.VISIBLE);
-                b4.setVisibility(View.GONE);
-                b5.setVisibility(View.GONE);
-                b6.setVisibility(View.GONE);
-                SharedPreferences.Editor editor = sharedpreferences.edit();
-                editor.putString(NRollerRoom1,string);
-                editor.apply();
-                break;
-            }
-
-            case "4":{
-                b1.setVisibility(View.VISIBLE);
-                b2.setVisibility(View.VISIBLE);
-                b3.setVisibility(View.VISIBLE);
-                b4.setVisibility(View.VISIBLE);
-                b5.setVisibility(View.GONE);
-                b6.setVisibility(View.GONE);
-                SharedPreferences.Editor editor = sharedpreferences.edit();
-                editor.putString(NRollerRoom1,string);
-                editor.apply();
-                break;
-            }
-            case "5":{
-                b1.setVisibility(View.VISIBLE);
-                b2.setVisibility(View.VISIBLE);
-                b3.setVisibility(View.VISIBLE);
-                b4.setVisibility(View.VISIBLE);
-                b5.setVisibility(View.VISIBLE);
-                b6.setVisibility(View.GONE);
-                SharedPreferences.Editor editor = sharedpreferences.edit();
-                editor.putString(NRollerRoom1,string);
-                editor.apply();
-                break;
-            }
-            case "6":{
-                b1.setVisibility(View.VISIBLE);
-                b2.setVisibility(View.VISIBLE);
-                b3.setVisibility(View.VISIBLE);
-                b4.setVisibility(View.VISIBLE);
-                b5.setVisibility(View.VISIBLE);
-                b6.setVisibility(View.VISIBLE);
-                SharedPreferences.Editor editor = sharedpreferences.edit();
-                editor.putString(NRollerRoom1,string);
-                editor.apply();
-                break;
-            }
-        }
-    }
-
-
-    public void vis_settings_r1(View view){
-
-        Button b1,b2;
-        EditText editText;
-        Spinner spinner_number, spinner_name;
-
-        b1 = findViewById(R.id.b_enter_r1);
-        b2 = findViewById(R.id.b_enter1_r1);
-        editText = findViewById(R.id.name_r1);
-        spinner_number=findViewById(R.id.number_spinner_r1);
-        spinner_name= findViewById(R.id.name_spinner_r1);
-
-        if (b1.getVisibility() == View.VISIBLE) {
-
-            b1.setVisibility(View.GONE);
-            b2.setVisibility(View.GONE);
-            editText.setVisibility(View.GONE);
-            spinner_number.setVisibility(View.GONE);
-            spinner_name.setVisibility(View.GONE);
-
-        }
-        else{
-            b1.setVisibility(View.VISIBLE);
-            b2.setVisibility(View.VISIBLE);
-            editText.setVisibility(View.VISIBLE);
-            spinner_number.setVisibility(View.VISIBLE);
-            spinner_name.setVisibility(View.VISIBLE);
-        }
-
-
-    }
-    // quando verranno create le altre activity "roller" scrivere il codice per cambiare il nome del loro titolo
-    public void change_name_r1(View view){
-
-        Spinner spinner, spinner_number;
-        EditText editText;
-
-        editText = findViewById(R.id.name_r1);
-        String name = editText.getText().toString();
-        spinner = findViewById(R.id.name_spinner_r1);
-        String string = String.valueOf(spinner.getSelectedItem());
-
-        spinner_number = findViewById(R.id.number_spinner_r1);
-        String number = String.valueOf(spinner_number.getSelectedItem());
-
-        switch (string) {
-            case "1": {
-                Button b1 = findViewById(R.id.t1);
-                b1.setText(name);
-                SharedPreferences.Editor editor = sharedpreferences.edit();
-                editor.putString(NameRoller1, name);
-                editor.apply();
-
-                if((Integer.parseInt(number))>1)
-
-                    spinner.setSelection(Integer.parseInt(string));
-
-                break;
-            }
-
-            case "2": {
-                if((Integer.parseInt(number))>=2){
-
-                    Button b2 = findViewById(R.id.t2);
-                    b2.setText(name);
-                    SharedPreferences.Editor editor = sharedpreferences.edit();
-                    editor.putString(NameRoller2, name);
-                    editor.apply();
-
-                }
-
-
-                else {
-                    CharSequence text = "Error: number of roller selected exceded number of rollers";
-                    int duration = Toast.LENGTH_LONG;
-                    Toast toast = Toast.makeText(this,text,duration);
-                    toast.show();
-                }
-
-                if((Integer.parseInt(number))>2)
-
-                    spinner.setSelection(Integer.parseInt(string));
-
-
-
-                break;
-            }
-
-            case "3": {
-
-                if((Integer.parseInt(number))>=3){
-                    Button b3 = findViewById(R.id.t3);
-                    b3.setText(name);
-                    SharedPreferences.Editor editor = sharedpreferences.edit();
-                    editor.putString(NameRoller3, name);
-                    editor.apply();
-                }
-                else{
-                    CharSequence text = "Error: number of roller selected exceded number of rollers";
-                    int duration = Toast.LENGTH_LONG;
-                    Toast toast = Toast.makeText(this,text,duration);
-                    toast.show();
-                }
-
-                if((Integer.parseInt(number))>3)
-
-                    spinner.setSelection(Integer.parseInt(string));
-
-
-                break;
-            }
-            case "4": {
-
-                if ((Integer.parseInt(number)) >= 4) {
-                    Button b4 = findViewById(R.id.t4);
-                    b4.setText(name);SharedPreferences.Editor editor = sharedpreferences.edit();
-                    editor.putString(NameRoller4, name);
-                    editor.apply();
-
-                }
-                else{
-                    CharSequence text = "Error: number of roller selected exceded number of rollers";
-                    int duration = Toast.LENGTH_LONG;
-                    Toast toast = Toast.makeText(this,text,duration);
-                    toast.show();
-                }
-                if((Integer.parseInt(number))>4)
-
-                    spinner.setSelection(Integer.parseInt(string));
-                break;
-            }
-            case "5": {
-
-                if((Integer.parseInt(number)) >= 5){
-                    Button b5 = findViewById(R.id.t5);
-                    b5.setText(name);
-                    SharedPreferences.Editor editor = sharedpreferences.edit();
-                    editor.putString(NameRoller5, name);
-                    editor.apply();
-                }
-                else {
-                    CharSequence text = "Error: number of roller selected exceded number of rollers";
-                    int duration = Toast.LENGTH_LONG;
-                    Toast toast = Toast.makeText(this,text,duration);
-                    toast.show();
-                }
-
-                if((Integer.parseInt(number))>5)
-
-                    spinner.setSelection(Integer.parseInt(string));
-                break;
-            }
-            case "6": {
-
-                if((Integer.parseInt(number)) >= 6){
-                    Button b6 = findViewById(R.id.t6);
-                    b6.setText(name);
-                    SharedPreferences.Editor editor = sharedpreferences.edit();
-                    editor.putString(NameRoller6, name);
-                    editor.apply();
-                }
-                else {
-                    CharSequence text = "Error: number of roller selected exceded number of rollers";
-                    int duration = Toast.LENGTH_LONG;
-                    Toast toast = Toast.makeText(this,text,duration);
-                    toast.show();
-                }
-                if((Integer.parseInt(number))>6)
-
-                    spinner.setSelection(Integer.parseInt(string));
-                break;
-            }
-
-
-        }
-
-    }
-
-  */
-
-
 
     public void gotoRoller1(View view) {
 

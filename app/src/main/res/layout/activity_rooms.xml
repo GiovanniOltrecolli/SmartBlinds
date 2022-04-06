@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- questo è un commento -->
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="50dp"
+            android:background="@color/green">
+
+
+        </LinearLayout>
+
+
+
+        <Button
+            android:id="@+id/r1"
+            android:layout_width="285dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:onClick="gotoRoom1"
+            android:backgroundTint="@color/green"
+            android:text="@string/goto_rooms1">
+
+        </Button>
+
+        <Button
+            android:id="@+id/r2"
+            android:layout_width="285dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:onClick="gotoRoom2"
+            android:backgroundTint="@color/green"
+            android:text="@string/goto_rooms2">
+
+        </Button>
+
+        <Button
+            android:id="@+id/r3"
+            android:layout_width="285dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:onClick="gotoRoom3"
+            android:backgroundTint="@color/green"
+            android:text="@string/goto_rooms3">
+
+        </Button>
+
+    </LinearLayout>
+
+</ScrollView>
+
